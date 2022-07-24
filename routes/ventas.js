@@ -9,14 +9,12 @@ const router = Router();
 
 // Mostrar Vendidos y Ganancia Total - privado
 router.get('/:coleccion', [
-    validarJWT,
-    esAdminRole
+    validarJWT
 ], ventas);
 
 // Vender producto - privado
 router.put('/:id', [
     validarJWT,
-    esAdminRole,
     check('id', 'No es un id valido de MongoDB').isMongoId(),
     check('id').custom(existeProductoPorId)
 ], venderProducto);

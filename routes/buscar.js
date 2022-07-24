@@ -1,5 +1,6 @@
 const { Router } = require('express');
 const { buscar } = require('../controllers/buscar');
+const { validarJWT } = require('../middlewares');
 
 const router = Router();
 
@@ -9,6 +10,8 @@ const router = Router();
 ** Total de busqueda por caracteristicas
 ** privado
 */
-router.get('/:coleccion', buscar)
+router.get('/:coleccion', [
+    validarJWT
+], buscar)
 
 module.exports = router;
