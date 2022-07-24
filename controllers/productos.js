@@ -7,7 +7,7 @@ const extensionesValidas = ['png', 'jpg', 'jpeg', 'gif'];
 
 const obtenerProductos = async (req, res = response) => {
 
-    const { limite = 5, desde = 0 } = req.query;
+    const { limite = 10, desde = 0 } = req.query;
     const query = { estado: true };
 
     const [total, productos] = await Promise.all([
