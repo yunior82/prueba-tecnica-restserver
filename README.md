@@ -1,3 +1,3 @@
-# WebServer + RestServer
+# Ejercicio técnico de BB Digital
 
-Recuerden que deben de ejecutar ```npm install``` para reconstruir los módulos de Node.
+Ejecutar 'npm install' para reconstruir los módulos de Node.
